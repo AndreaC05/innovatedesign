@@ -1,0 +1,279 @@
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+}
+
+/* Navbar cuando se hace scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(10, 31, 68, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  max-width: 1600px;
+  margin: 0 auto;
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled .navbar-container {
+  padding: 15px 8%;
+}
+
+/* ========== LOGO ========== */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.navbar-logo img {
+  height: 80px;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+.navbar.navbar.scrolled {
+    top: 0px;
+}
+
+.navbar.scrolled .navbar-logo img {
+  height: 80px;
+  filter: brightness(0) invert(0) drop-shadow(0 2px 8px rgba(10, 31, 68, 0.2));
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== MENU ========== */
+.navbar-menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled .navbar-link {
+  color: #0A1F44;
+  text-shadow: none;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #F2F4F7 0%, #1F3C88 100%);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F2F4F7;
+}
+
+.navbar.scrolled .navbar-link:hover {
+  color: #1F3C88;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* ========== BOTÓN DE ACCIÓN ========== */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #F2F4F7 0%, #FFFFFF 100%);
+  color: #0A1F44;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(242, 244, 247, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.navbar-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(242, 244, 247, 0.5);
+}
+
+.navbar.scrolled .navbar-btn {
+  background: linear-gradient(135deg, #1F3C88 0%, #0A1F44 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(31, 60, 136, 0.3);
+}
+
+.navbar.scrolled .navbar-btn:hover {
+  box-shadow: 0 8px 25px rgba(31, 60, 136, 0.5);
+}
+
+/* ========== HAMBURGER MENU ========== */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.navbar-hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .navbar-hamburger span {
+  background-color: #0A1F44;
+  box-shadow: none;
+}
+
+.navbar-hamburger span.active:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-hamburger span.active:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-hamburger span.active:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .navbar-menu {
+    gap: 30px;
+  }
+
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 15px 5%;
+  }
+
+  .navbar.scrolled .navbar-container {
+    padding: 12px 5%;
+  }
+
+  .navbar-logo img {
+    height: 38px;
+  }
+
+  .navbar.scrolled .navbar-logo img {
+    height: 35px;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 350px;
+    height: 100vh;
+    background: linear-gradient(135deg, #0A1F44 0%, #1F3C88 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-link {
+    color: #F2F4F7;
+    font-size: 1.2rem;
+    text-shadow: none;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-link::after {
+    background: #F2F4F7;
+  }
+
+  .navbar-link:hover {
+    color: #FFFFFF;
+    padding-left: 10px;
+  }
+
+  /* Botón dentro del menú móvil */
+  .navbar-menu.active::after {
+    content: 'Cotizar Proyecto';
+    display: block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #F2F4F7 0%, #FFFFFF 100%);
+    color: #0A1F44;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    width: 80%;
+  }
+
+  .navbar-logo img {
+    height: 35px;
+  }
+
+  .navbar.scrolled .navbar-logo img {
+    height: 32px;
+  }
+}
