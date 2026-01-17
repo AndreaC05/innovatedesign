@@ -62,6 +62,7 @@ export default function About() {
               <Button className="btn-primary">
                 Contactanos <i className="pi pi-arrow-right"></i>
               </Button>
+              <Link to="/about"><Button className="btn-secondary">Nosotros</Button></Link>
             </div>
           </div>
 

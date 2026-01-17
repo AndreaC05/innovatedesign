@@ -7,6 +7,7 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Planes from "./pages/Planes";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* Rutas públicas */}
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
+        <Route exact path="/innovatedesignplans" element={<Planes />} />
       </Routes>
     </BrowserRouter>
   );
