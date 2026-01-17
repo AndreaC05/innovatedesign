@@ -3,6 +3,7 @@ import Fondo from "../assets/fondo.png";
 import Logo from "../assets/Logo_claro.svg";
 import { Button } from 'primereact/button';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import SectionNosotros from '../components/SectionNosotros';
 import SectionBeneficios from '../components/SectionBeneficios';
 import "../style/Home.css";
@@ -96,6 +97,7 @@ export default function Home() {
               <SectionBeneficios />
         </section>
       </div>
+      <Footer />
     </>
   );
 }
