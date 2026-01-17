@@ -34,7 +34,7 @@ export default function Navbar() {
 
                 <div className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
                     <Link to="/" className="navbar-link">Home</Link>
-                    <Link to="/" className="navbar-link">About</Link>
+                    <Link to="/about" className="navbar-link">About</Link>
                     <Link to="/" className="navbar-link">Innovate Design plans</Link>
                     <Link to="/" className="navbar-link">Contact</Link>
                 </div>

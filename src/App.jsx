@@ -6,6 +6,7 @@ import "primeflex/primeflex.css";
 import "./App.css";
 
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         {/* Rutas públicas */}
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

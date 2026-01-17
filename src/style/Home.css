@@ -1,3 +1,10 @@
+/* Reset y configuración general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container_principal {
   width: 100%;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +131,7 @@
   overflow: hidden;
   min-width: 160px;
   animation: dropdownSlide 0.3s ease;
-  z-index: 2000;
+  z-index: 1000;
 }
 
 @keyframes dropdownSlide {
@@ -516,20 +523,27 @@
 .btn-secondary,
 .buttons button:last-child {
   background-color: transparent;
+  background-image: none;
+  background: transparent;
   color: #F2F4F7;
   border: 2px solid #F2F4F7;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
+  text-decoration: none;
+  outline: none;
 }
 
 .btn-secondary:hover,
 .buttons button:last-child:hover {
   background-color: #F2F4F7;
   color: #0A1F44;
+  background-image: none;
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 12px 35px rgba(242, 244, 247, 0.5);
   border-color: #F2F4F7;
+  text-decoration: none;
+  outline: none;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
