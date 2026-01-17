@@ -92,11 +92,11 @@ export default function About() {
             </p>
             <div className="hero-stats-white">
               <div className="stat-item-white">
-                <h3>100+</h3>
+                <h3>15+</h3>
                 <p>Proyectos completados</p>
               </div>
               <div className="stat-item-white">
-                <h3>98%</h3>
+                <h3>100%</h3>
                 <p>Clientes satisfechos</p>
               </div>
               <div className="stat-item-white">
