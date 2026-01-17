@@ -90,7 +90,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <i className="pi pi-phone"></i>
-                  <a href="tel:+51999999999">+51 950 874 416</a>
+                  <a href="tel:+51950874416">+51 950 874 416</a>
                 </li>
                 <li>
                   <i className="pi pi-clock"></i>
