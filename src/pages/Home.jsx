@@ -1,18 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Fondo from "../assets/fondo.png";
 import Logo from "../assets/Logo_claro.svg";
-import { Button } from 'primereact/button';
-import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import InfoBasico from '../components/InfoBasico';
-import SectionNosotros from '../components/SectionNosotros';
-import SectionBeneficios from '../components/SectionBeneficios';
+import { Button } from "primereact/button";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import InfoBasico from "../components/InfoBasico";
+import SectionNosotros from "../components/SectionNosotros";
+import SectionBeneficios from "../components/SectionBeneficios";
 import "../style/Home.css";
 
 export default function Home() {
-  
-
   return (
     <>
       <Navbar />
@@ -20,18 +18,37 @@ export default function Home() {
         {/* Barra superior de información */}
         <InfoBasico />
         {/* Hero Section con imagen de fondo */}
-        <section className="header" style={{ backgroundImage: `url(${Fondo})` }}>
+        <section
+          className="header"
+          style={{ backgroundImage: `url(${Fondo})` }}
+        >
           <div className="tit">
             <h1 className="animated-title">Innovate Design</h1>
-            <p className="animated-subtitle">Creamos sitios web rápidos, modernos y profesionales</p>
+            <p className="animated-subtitle">
+              Creamos sitios web rápidos, modernos y profesionales
+            </p>
             <div className="buttons">
-              <Button className="btn-primary">
+              <Button
+                className="btn-primary"
+                onClick={() => {
+                  const phone = "51950874416"; // 👉 tu número con código de país (Perú = 51)
+                  const message = encodeURIComponent(
+                    "Hola, Deseo más información",
+                  );
+                  window.open(
+                    `https://wa.me/${phone}?text=${message}`,
+                    "_blank",
+                  );
+                }}
+              >
                 Contactanos <i className="pi pi-arrow-right"></i>
               </Button>
-              <Link to="/about"><Button className="btn-secondary">Nosotros</Button></Link>
+              <Link to="/about">
+                <Button className="btn-secondary">Nosotros</Button>
+              </Link>
             </div>
           </div>
-          
+
           {/* Partículas flotantes decorativas */}
           <div className="floating-particles">
             <div className="particle particle-1"></div>
@@ -42,10 +59,10 @@ export default function Home() {
           </div>
         </section>
         <section className="nosotros_section">
-            <SectionNosotros />
+          <SectionNosotros />
         </section>
-        <section className='beneficios_section'>
-              <SectionBeneficios />
+        <section className="beneficios_section">
+          <SectionBeneficios />
         </section>
       </div>
       <Footer />

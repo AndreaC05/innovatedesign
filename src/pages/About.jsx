@@ -59,10 +59,24 @@ export default function About() {
               Diseñamos sitios web que fortalecen la imagen de tu negocio.
             </p>
             <div className="buttons">
-              <Button className="btn-primary">
-                Contactanos <i className="pi pi-arrow-right"></i>
+              <Button
+                className="btn-primary"
+                onClick={() => {
+                  const phone = "51950874416"; // 👉 tu número con código de país (Perú = 51)
+                  const message = encodeURIComponent(
+                    "Hola, Deseo más información",
+                  );
+                  window.open(
+                    `https://wa.me/${phone}?text=${message}`,
+                    "_blank",
+                  );
+                }}
+              >
+                Contáctanos <i className="pi pi-arrow-right"></i>
               </Button>
-              <Link to="/about"><Button className="btn-secondary">Nosotros</Button></Link>
+              <Link to="/about">
+                <Button className="btn-secondary">Nosotros</Button>
+              </Link>
             </div>
           </div>
 

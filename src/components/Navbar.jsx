@@ -36,13 +36,14 @@ export default function Navbar() {
                     <Link to="/" className="navbar-link">Home</Link>
                     <Link to="/about" className="navbar-link">About</Link>
                     <Link to="/innovatedesignplans" className="navbar-link">Innovate Design plans</Link>
-                    <Link to="/" className="navbar-link">Contact</Link>
+                    <Link to="/contact" className="navbar-link">Contact</Link>
                 </div>
 
                 <div className="navbar-actions">
+                    <Link to="/innovatedesignplans">
                     <Button className="navbar-btn">
                          Elegir Plan
-                    </Button>
+                    </Button></Link>
                 </div>
 
                 <div className="navbar-hamburger" onClick={toggleMenu}>
