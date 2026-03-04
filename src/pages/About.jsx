@@ -242,7 +242,10 @@ export default function About() {
               >
                 Solicitar cotización <i className="pi pi-arrow-right"></i>
               </Button>
-              <Button className="btn-cta-secondary">
+              <Button
+                className="btn-cta-secondary"
+                onClick={() => window.open("https://portafoliodesarrolladorfullstack.netlify.app/projects", "_blank")}
+              >
                 Ver portafolio <i className="pi pi-external-link"></i>
               </Button>
             </div>
