@@ -244,7 +244,7 @@ export default function About() {
               </Button>
               <Button
                 className="btn-cta-secondary"
-                onClick={() => window.open("https://portafoliodesarrolladorfullstack.netlify.app/projects", "_blank")}
+                onClick={() => window.open("https://portafoliodesarrolladorfullstack.netlify.app/", "_blank")}
               >
                 Ver portafolio <i className="pi pi-external-link"></i>
               </Button>
