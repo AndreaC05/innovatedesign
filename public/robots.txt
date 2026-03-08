@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://innovate-design.netlify.app/sitemap.xml
+Sitemap: https://innovatedesing.com/sitemap.xml
