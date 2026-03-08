@@ -12,7 +12,7 @@ export default function Planes() {
       numero: "1",
       nombre: "Landing Page",
       descripcion: "Ideal para emprendedores y negocios pequeños",
-      precio: "350",
+      precio: "110",
       caracteristicas: [
         "Desarrollo en código personalizado",
         "Diseño moderno y responsive",
@@ -29,7 +29,7 @@ export default function Planes() {
       numero: "2",
       nombre: "Web Corporativa",
       descripcion: "Para empresas que buscan presencia profesional",
-      precio: "500",
+      precio: "200",
       caracteristicas: [
         "Desarrollo en código personalizado",
         "Hasta 5 secciones",
@@ -47,7 +47,7 @@ export default function Planes() {
       numero: "3",
       nombre: "Web Empresarial",
       descripcion: "Soluciones modernas para empresas en crecimiento",
-      precio: "800",
+      precio: "300",
       caracteristicas: [
         "Desarrollo frontend avanzado",
         "Arquitectura frontend escalable",
@@ -145,7 +145,7 @@ export default function Planes() {
 
                 <div className="plan-precio">
                   <div className="precio-wrapper">
-                    <span className="moneda">S/</span>
+                    <span className="moneda">$</span>
                     <span className="cantidad">{plan.precio}</span>
                   </div>
                   <p className="precio-detalle">Pago único</p>
